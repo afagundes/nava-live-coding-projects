@@ -1,0 +1,24 @@
+.lista-contatos-wrapper {
+    padding: var(--default-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-contatos-wrapper table {
+    border-collapse: collapse;
+}
+
+.lista-contatos-wrapper table,
+.lista-contatos-wrapper table tr,
+.lista-contatos-wrapper table th,
+.lista-contatos-wrapper table td
+{
+    border: 1px solid #000;
+}
+
+.lista-contatos-wrapper table th,
+.lista-contatos-wrapper table td
+{
+    padding: var(--default-padding);
+}

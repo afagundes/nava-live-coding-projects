@@ -1,0 +1,10 @@
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--default-padding);
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+}

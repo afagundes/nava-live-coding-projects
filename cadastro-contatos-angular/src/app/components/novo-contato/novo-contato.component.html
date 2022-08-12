@@ -1,0 +1,19 @@
+<div class="cadastrar-contato-wrapper">
+    <h1>Cadastrar novo Contato</h1>
+
+    <p class="message" *ngIf="message">{{message}}</p>
+
+    <form [formGroup]="contatoForm" (ngSubmit)="salvar()">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" formControlName="nome" />
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade" formControlName="idade" />
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" id="telefone" formControlName="telefone" />
+
+        <div class="buttons">
+            <button type="submit">Salvar</button>
+            <button type="button" (click)="cancelar()">Cancelar</button>
+        </div>
+    </form>
+</div>

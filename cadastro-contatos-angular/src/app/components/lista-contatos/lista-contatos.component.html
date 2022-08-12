@@ -1,0 +1,25 @@
+<div class="lista-contatos-wrapper">
+    <h1>Lista de Contatos</h1>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Telefone</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let contato of contatos">
+            <td>{{contato.nome}}</td>
+            <td>{{contato.idade}}</td>
+            <td>{{contato.telefone}}</td>
+            <td>
+                <button 
+                    type="button"
+                    (click)="excluir(contato.id)"
+                >
+                    Excluir
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,147 @@
+:root {
+    --default-padding: 10px;
+    --default-font-size: 16px;
+    --default-gray: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--default-font-size);
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "topo"
+                         "corpo"
+                         "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 40px auto 40px;
+}
+
+header {
+    grid-area: topo;
+    border: 1px solid #000;
+    padding: var(--default-padding);
+    background-color: #121212;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: var(--default-font-size);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: var(--default-padding);
+}
+
+header ul a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    grid-area: corpo;
+    display: flex;
+    justify-content: center;
+    padding: var(--default-padding);
+    padding-top: calc(var(--default-padding) * 5)
+}
+
+footer {
+    grid-area: rodape;
+    background-color: var(--default-gray);
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: calc(var(--default-padding) * 3);
+}
+
+/* Lista de contatos */
+
+.lista-contatos-wrapper {
+    width: 70%;
+    padding: var(--default-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-contatos-wrapper table {
+    border-collapse: collapse;
+}
+
+.lista-contatos-wrapper table,
+.lista-contatos-wrapper table tr,
+.lista-contatos-wrapper table th,
+.lista-contatos-wrapper table td
+{
+    border: 1px solid #000;
+}
+
+.lista-contatos-wrapper table th,
+.lista-contatos-wrapper table td
+{
+    padding: var(--default-padding);
+}
+
+/* Cadastro de contatos */
+
+.cadastrar-contato-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastrar-contato-wrapper form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.cadastrar-contato-wrapper input {
+    background-color: var(--default-gray);
+    padding: var(--default-padding);
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: calc(var(--default-padding) * 2);
+}
+
+.cadastrar-contato-wrapper button {
+    padding: var(--default-padding);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cadastrar-contato-wrapper button[type="submit"] {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+}
+
+.cadastrar-contato-wrapper button[type="button"] {
+    background-color: var(--default-gray);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--default-padding);
+}
